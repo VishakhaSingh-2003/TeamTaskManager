@@ -52,6 +52,13 @@ app.get("/api/health", (_req, res) => {
   res.json({ status: "ok", service: "team-task-manager-backend" });
 });
 
+app.get("/", (_req, res) => {
+  res.json({
+    message: "Team Task Manager backend is running",
+    health: "/api/health",
+  });
+});
+
 app.post(
   "/api/auth/signup",
   asyncHandler(async (req, res) => {
