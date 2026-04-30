@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Team Task Manager (Full-Stack)
 
 Separate full-stack project for the assignment.
@@ -83,3 +84,6 @@ Deploy as two Railway services from the same GitHub repo.
 - `GET /api/tasks`
 - `PATCH /api/tasks/:taskId/status` (ADMIN or assignee)
 - `GET /api/dashboard`
+=======
+# TeamTaskManager
+>>>>>>> 590ef452b6acbb1d7f7c20ab9c983fd6d347c43b
