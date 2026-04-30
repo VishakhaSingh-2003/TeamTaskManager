@@ -1,6 +1,14 @@
 import { DataTypes, Sequelize } from "sequelize";
+import fs from "node:fs";
+import path from "node:path";
 
 const storage = process.env.DB_STORAGE || "./data/team-task-manager.sqlite";
+const storageDir = path.dirname(storage);
+
+// Ensure SQLite directory exists in all environments (local + Railway).
+if (storageDir && storageDir !== ".") {
+  fs.mkdirSync(storageDir, { recursive: true });
+}
 
 export const sequelize = new Sequelize({
   dialect: "sqlite",
